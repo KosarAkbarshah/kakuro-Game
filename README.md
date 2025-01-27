@@ -1,5 +1,5 @@
 # 🎮 **Kakuro Game**  
-A modern implementation of the classic Kakuro puzzle game built with React.js frontend and Java backend. Kakuro is a logic-based number puzzle that combines elements of sudoku and crosswords.
+A modern implementation of the classic Kakuro puzzle game built with React.js frontend and Python and flask backend. Kakuro is a logic-based number puzzle that combines elements of sudoku and crosswords.
 
 ---
 
