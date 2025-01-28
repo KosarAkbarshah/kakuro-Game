@@ -19,26 +19,16 @@ const main = () => {
                     </div>
 
                     <div className="box">
-                        <div className='cubes'>
-
-                            {/* <!-- Row 1 --> */}
-                            <div class="cell black"></div>
-                            <div class="cell black"></div>
-                            <div class="cell black hint">4\</div>
-                            <div class="cell white"></div>
-
-                            {/* <!-- Row 2 --> */}
-                            <div class="cell black"></div>
-                            <div class="cell black hint">4\</div>
-                            <div class="cell white"></div>
-                            <div class="cell white"></div>
-
-                            {/* <!-- Row 3 --> */}
-                            <div class="cell black hint">6\</div>
-                            <div class="cell white"></div>
-                            <div class="cell white"></div>
-                            <div class="cell black"></div>
+                        <div className="form">
+                            <label className='label'>Username</label>
+                            <input type="text" className="input" placeholder="Enter your username" />
+                            <label className='label'>Email</label>
+                            <input type="email" className="input" placeholder="Enter your email" />
+                            <label className='label'>Password</label>
+                            <input type="password" className="input" placeholder="Enter your password" />
                         </div>
+                        <span className='guest'>Don't have an account? Continue as Guest</span>
+                        <button className='guestbtn'>Guest Login</button>
                     </div>
                     <img src={assets.bg1} alt="" />
                 </div>

@@ -24,6 +24,11 @@ main {
         background-color: rgba(255, 222, 173, 0.792);
         margin: 10px auto;
         box-shadow: rgba(0, 0, 0, 0.64) 0px 3px 8px;
+        transition: .3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
 
 
         >h1 {
@@ -45,7 +50,7 @@ main {
 
     .gameplay {
         >img {
-            width: 500px;
+            width: 600px;
             height: 600px;
             object-fit: cover;
         }
@@ -54,12 +59,13 @@ main {
         flex-direction: row;
 
         >.instructions {
+
             display: flex;
             width: 350px;
             justify-content: center;
             align-items: center;
             background-color: rgba(255, 222, 173, 0.792);
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
             flex-direction: column;
             margin-left: 20px;
@@ -80,23 +86,103 @@ main {
                 max-height: 100%;
                 scrollbar-width: thin;
                 scrollbar-color: rgb(128, 71, 24) rgb(247, 205, 180);
-                font-size: 22px;
+                font-size: 18px;
                 font-family: "Bona Nova SC", serif;
+
 
             }
         }
 
         >.box {
             display: flex;
-            width: 800px;
+            width: 600px;
             height: 550px;
             justify-content: center;
             align-items: center;
             background-color: rgba(255, 222, 173, 0.833);
             padding: 20px;
-            margin-left: 70px;
+            margin-left: 180px;
             border-radius: 10px;
             box-shadow: rgba(0, 0, 0, 0.64) 0px 3px 8px;
+            flex-direction: column;
+
+            >.guestbtn {
+                border-radius: 10px;
+                padding: 15px;
+                font-size: 20px;
+                font-family: "Bona Nova SC", serif;
+                border: none;
+                background-color: rgba(127, 78, 47, 0.872);
+                color: rgba(255, 255, 255, 0.733);
+                transition: 0.2s;
+
+
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.701) 0px 3px 6px, rgba(0, 0, 0, 0.811) 0px 3px 6px;
+                }
+
+            }
+
+            >.guest {
+                font-family: "Bona Nova SC", serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                font-size: 22px;
+                cursor: pointer;
+
+            }
+
+
+            >.form {
+
+                width: 90%;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+
+
+
+
+                >.label {
+                    font-family: "Bona Nova SC", serif;
+                    padding: 10px;
+                    font-size: 30px;
+                }
+
+                >input {
+                    border-radius: 10px;
+                    border: none;
+                    outline: none;
+                    padding: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(127, 78, 47, 0.872);
+                    font-size: 20px;
+                    font-family: "Bona Nova SC", serif;
+                    caret-color: white;
+                    color: white;
+                    transition: 0.2s;
+
+
+                    &:hover {
+                        box-shadow: rgba(0, 0, 0, 0.701) 0px 3px 6px, rgba(0, 0, 0, 0.811) 0px 3px 6px;
+                    }
+
+                    &::placeholder {
+                        color: rgba(255, 255, 255, 0.637);
+                        border: none;
+                        outline: none;
+
+
+                    }
+                }
+            }
         }
     }
 
