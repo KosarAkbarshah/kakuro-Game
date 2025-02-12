@@ -14,6 +14,9 @@ class NumberCell(KakuroCell):
         super().__init__(CellType.NUMBER)
         self.value = value
 
+    def set_value(self, value):
+        self.value = value
+
     def to_dict(self):
         return {
             "type" : "number",

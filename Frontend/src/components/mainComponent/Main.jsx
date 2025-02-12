@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { assets } from '../../assets/assets'
 import './Main.css'
 import Board from './Board'
+import CustomButton from './ButtonTest';
 
 
 const Main = () => {
@@ -24,6 +25,7 @@ const Main = () => {
                 <div className="box">
                     <Board/>
                 </div>
+                
                 <img src={assets.bg1} alt="" />
             </div>
         </main>
