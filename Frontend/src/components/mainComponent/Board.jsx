@@ -83,23 +83,20 @@ const Board = () => {
           {board.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {row.map((cell, colIndex) => {
-                // Check if this cell is currently being edited
                 const isEditing = editingCell?.row === rowIndex && editingCell?.col === colIndex;
-                
-                // Handle cell click to enable editing
+  
                 const handleClick = () => {
                   if (cell.type === "number") {
                     setEditingCell({ row: rowIndex, col: colIndex });
                   }
                 };
-    
+  
                 return (
                   <td
                     key={colIndex}
                     className={`cell ${cell.type}`}
                     onClick={handleClick}
                   >
-                    {/* Render sum-type cells with sum hints */}
                     {cell.type === "sum" && (
                       <div className="sum-cell">
                         {cell.right_sum !== null && `→${cell.right_sum}`}
@@ -107,8 +104,7 @@ const Board = () => {
                         {cell.down_sum !== null && `↓${cell.down_sum}`}
                       </div>
                     )}
-                    
-                    {/* Render number cells with editable input */}
+  
                     {cell.type === "number" && (
                       <div className="number-cell">
                         {isEditing ? (
@@ -118,6 +114,7 @@ const Board = () => {
                             max="9"
                             autoFocus
                             style={{ appearance: "textfield" }}
+                            className="input-number-box"
                             onBlur={(e) => updateCellValue(rowIndex, colIndex, e.target.value)}
                             onKeyDown={(e) => {
                               if (e.key === "Enter") {
@@ -126,7 +123,7 @@ const Board = () => {
                             }}
                           />
                         ) : (
-                          <span>{cell.value}</span>
+                          cell.value !== 0 && <span>{cell.value}</span>
                         )}
                       </div>
                     )}
@@ -139,7 +136,6 @@ const Board = () => {
       </table>
       <button onClick={validateBoard} className="btn">Check Answer</button>
     </div>
-
   );
 };
 

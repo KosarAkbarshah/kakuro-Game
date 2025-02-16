@@ -18,10 +18,10 @@ class KakuroBoard:
         #generate a random 4x4 for now
         self.board = [
             [BlockCell(), BlockCell(), BlockCell(), SumCell(19, None), SumCell(22, None)],
-            [BlockCell(), SumCell(13, None), SumCell(11, 16), NumberCell(7), NumberCell(9)],
-            [SumCell(None, 11), NumberCell(1), NumberCell(2), NumberCell(3), NumberCell(5)],
-            [SumCell(None, 21), NumberCell(3), NumberCell(1), NumberCell(9), NumberCell(8)],
-            [SumCell(None, 17), NumberCell(9), NumberCell(8), BlockCell(), BlockCell()]
+            [BlockCell(), SumCell(13, None), SumCell(11, 16), NumberCell(0), NumberCell(0)],
+            [SumCell(None, 11), NumberCell(0), NumberCell(0), NumberCell(0), NumberCell(0)],
+            [SumCell(None, 21), NumberCell(0), NumberCell(0), NumberCell(0), NumberCell(0)],
+            [SumCell(None, 17), NumberCell(0), NumberCell(0), BlockCell(), BlockCell()]
         ]
         print(self)
 
